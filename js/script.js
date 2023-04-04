@@ -1,24 +1,32 @@
 // active scroll section 
-let sections = document.querySelectorAll('section');
-let navlinks = document.querySelectorAll('header nav a');
-console.log(window.screenY);
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("header nav a");
 
-        if (top >= offset && top < offset + height) {
-            navlinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+const resetLinks = () => {
+    navLinks.forEach((link) => link.classList.remove("active"));
+};
+
+const handleScroll = () => {
+    const { pageYOffset } = window;
+
+    sections.forEach((section) => {
+        const { id, offsetTop, clientHeight } = section;
+        const offset = offsetTop - 1;
+
+        if (pageYOffset >= offset && pageYOffset < offset + clientHeight) {
+            resetLinks();
+            navLinks.forEach((link) => {
+                if (link.dataset.scroll === id) {
+                    link.classList.add("active");
+                }
             });
-        };
+        }
     });
-}
+};
 
-// navbar
+document.addEventListener("scroll", handleScroll);
+
+// navbar stick
 window.onscroll = () => {
     let header = document.querySelector('.header');
     header.classList.toggle('sticky', window.scrollY > 100);
