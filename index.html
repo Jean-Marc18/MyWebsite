@@ -157,7 +157,58 @@
     </section>
     <!-- contact section -->
     <section class="contact" id="contact">
-
+      <h2 class="heading">Contact <span>Me!</span></h2>
+      <div class="container">
+        <div class="left">
+          <div class="form-wrapper">
+            <div class="contact-heading">
+              <h1>Let's work together<span>.</span></h1>
+              <p class="texte">Or reach us via : <a href="mailto:koffijm18@gmail.com">koffijm18@gmail.com</a></p>
+            </div>
+            <form action="index.html" method="post" class="contact-form">
+              <div class="input-wrap">
+                <input type="text" autocomplete="off" name="First Name" class="contact-input" required>
+                <label for="First Name">First Name</label>
+                <i class='icon bx bxs-user-pin'></i>
+              </div>
+              <div class="input-wrap">
+                <input type="text" autocomplete="off" name="Last Name" class="contact-input" required>
+                <label for="Last Name">Last Name</label>
+                <i class='icon bx bxs-user-pin'></i>
+              </div>
+              <div class="input-wrap w-100">
+                <input type="email" autocomplete="off" name="Email" class="contact-input" required>
+                <label for="Email">Email</label>
+                <i class='icon bx bx-envelope'></i>
+              </div>
+              <div class="input-wrap textarea w-100">
+                <textarea name="Message" class="contact-input" cols="30" rows="10" auto-complete="off" required></textarea>
+                <label for="Message">Message</label>
+                <i class='icon bx bxs-inbox' ></i>
+              </div>
+              <div class="contact-buttons w-100">
+                <button class="bttn upload">
+                  <span>
+                    <i class='bx bx-paperclip'></i> Add attachment
+                  </span>
+                  <input type="file" name="attachment" id="attachment">
+                </button>
+                <input type="submit" value="Send message" class="bttn">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="right">
+          <div class="image-wrapper">
+            <img src="./images/img.jpg" alt="img-paysage" class="img">
+            <div class="wave-wrap">
+              <svg class="wave" viewBox="0 0 783 1536" fill="none" xmlns="https://www.w3.org/2000/svg">
+                <path id="wave" d="M236.705 1356.18C200.542 1483.72 64.5004 1528.54 1 1535V1H770.538C793.858 63.1213 797.23 196.197 624.165 231.531C407.833 275.698 274.374 331.715 450.884 568.709C627.393 805.704 510.079 815.399 347.561 939.282C185.043 1063.17 281.908 1196.74 236.705 1356.18Z"/>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
