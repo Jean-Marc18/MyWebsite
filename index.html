@@ -28,9 +28,12 @@
         <a data-scroll="contact" href="#contact">Contact</a>
       </nav>
       <div class="bx bx-moon" id="darkMode-icon"></div>
+      <div class="bx bx-menu" id="menu-icon"></div>
     </header>
     <!-- home section -->
     <section class="home" id="home">
+      <img src="./images/icons/blob(1).svg" alt="blob" class="blob b1">
+      <img src="./images/icons/blob(2).svg " alt="blob" class="blob b2">
       <div class="home-content">
         <h3>Hello, My Name is</h3>
         <h1>N. Jean-Marc KOFFI</h1>
@@ -86,7 +89,7 @@
             <p>As a junior web developer, I am passionate about programming and continuously learning new things in this field. Outside of work, I am also interested in technology in general, as well as video games and sports. Regarding my skills, I have a solid understanding of basic programming languages such as HTML, CSS, JavaScript, Java and PHP, and I have also worked with various frameworks like React and Angular. I also working with different database technologies such as MySQL.<br>
             I am also enthusiastic about working with people who have different skills and knowledge than mine.
             </p>
-            <a href="#" class="btn">Read More</a>
+            <!-- <a href="#" class="btn">Read More</a> -->
         </div>
     </section>
     <!-- services section -->
@@ -159,13 +162,14 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
       <div class="container">
+        <div class="back"></div>
         <div class="left">
           <div class="form-wrapper">
             <div class="contact-heading">
               <h1>Let's work together<span>.</span></h1>
               <p class="texte">Or reach us via : <a href="mailto:koffijm18@gmail.com">koffijm18@gmail.com</a></p>
             </div>
-            <form action="index.html" method="post" class="contact-form">
+            <form action="mailto:koffijm18@gmail.com" method="post" class="contact-form">
               <div class="input-wrap">
                 <input type="text" autocomplete="off" name="First Name" class="contact-input" required>
                 <label for="First Name">First Name</label>
@@ -210,7 +214,17 @@
         </div>
       </div>
     </section>
-    
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>CopyRight &copy; 2023 by KNJM | All Rights Reserved.</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
     <script src="./js/script.js"></script>
   </body>

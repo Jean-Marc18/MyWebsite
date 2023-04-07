@@ -1,3 +1,13 @@
+// menu icon navbar
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+
+
 // active scroll section 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
@@ -30,6 +40,10 @@ document.addEventListener("scroll", handleScroll);
 window.onscroll = () => {
     let header = document.querySelector('.header');
     header.classList.toggle('sticky', window.scrollY > 100);
+
+    // remove when we're scrolling
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 }
 
 var typed = new Typed(".multiple-text", {
@@ -57,3 +71,24 @@ inputs.forEach((ipt) => {
         }
     })
 })
+
+// darkMode
+let darkModeIcon = document.querySelector('#darkMode-icon');
+darkModeIcon.onclick = () => {
+    darkModeIcon.classList.toggle('bx-sun');
+    document.body.classList.toggle('dark-mode');
+}
+
+// scroll reveal
+
+ScrollReveal({ 
+    reset: true,
+    distance: '80px',
+    duration: 1000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.heading', { origin: 'top' });
+ScrollReveal().reveal('.home-content h1, .about-img img, .contact-heading', { origin: 'left' });
+ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.services-container, .portfolio-box, .contact-form', { origin: 'bottom' });
